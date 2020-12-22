@@ -231,6 +231,9 @@ class Utility(commands.Cog):
             return False
         with open('thank.json','r') as f:
             thank = json.load(f)
+        elif member == "762685470672158722":
+            awaid ctx.send("You can't thanks me, I am bot!")
+            return False
         if str(member.id) not in thank:
             thank[str(member.id)] = {}
             thank[str(member.id)]['tpoin'] = 1
